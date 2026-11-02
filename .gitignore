@@ -53,3 +53,26 @@ jspm_packages/
 
 # Aider AI Chat
 .aider*
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.vscode/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+secrets/
