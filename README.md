@@ -1,15 +1,15 @@
 # Library Management System
 
-A Library Management System developed using the **Frappe Framework (Version 16)** and Python. This application helps manage library members, articles, memberships, and book issue/return transactions.
+A Library Management System developed using **Python and Frappe Framework v16**. This application helps manage library members, articles, memberships, and book issue/return transactions.
 
 ## Project Overview
 
-The application provides a structured way to manage library operations using Frappe DocTypes and Python Controllers.
+This project demonstrates how to build a library management application using Frappe DocTypes, document lifecycle methods, and Python controllers.
 
 ## Technologies Used
 
 * Python
-* Frappe Framework – Version 16
+* Frappe Framework v16
 * JavaScript
 * MariaDB
 * HTML / CSS
@@ -32,39 +32,45 @@ The application provides a structured way to manage library operations using Fra
 
 ### 1. Library Member
 
-Stores library member information.
+Stores library member details such as name, email, phone number, and address.
 
 ### 2. Library Article
 
-Stores article details such as article name, author, ISBN, publisher, description, and availability status.
+Stores article details including article name, author, ISBN, publisher, description, image, and availability status.
 
 ### 3. Library Membership
 
-Manages member subscriptions, membership dates, and payment status.
+Manages library membership details, membership dates, and payment status.
 
 ### 4. Library Transaction
 
-Manages book issue and return transactions.
+Manages book issue and return transactions by linking library members and articles.
 
 ## Business Logic
 
-The Library Transaction controller uses Python document lifecycle methods:
+The Library Transaction controller uses Frappe document lifecycle methods:
 
-* `validate()` – Checks article availability and transaction conditions.
-* `on_submit()` – Updates the article status when a transaction is submitted.
-* `frappe.get_doc()` – Retrieves Library Article documents.
+* **`validate()`** – Checks article availability and validates issue/return conditions.
+* **`on_submit()`** – Updates the article status when a transaction is submitted.
+* **`frappe.get_doc()`** – Retrieves Library Article documents for processing.
 
 ### Transaction Workflow
 
-**Issue:**
+**Issue**
 
-* Checks the article status.
-* Updates the status to `Issued` after submission.
+1. Checks whether the article is available.
+2. Prevents issuing an article that is already issued.
+3. Updates the article status to `Issued` after submission.
 
-**Return:**
+**Return**
 
-* Checks whether the article is currently issued.
-* Updates the status to `Available` after submission.
+1. Checks whether the article is currently issued.
+2. Prevents returning an article that is not issued.
+3. Updates the article status to `Available` after submission.
+
+## Screenshots
+
+Application screenshots are available in the [`screenshots`](screenshots/README.md) folder.
 
 ## Installation
 
@@ -82,11 +88,11 @@ bench --site your-site-name migrate
 
 ## Project Repository
 
-GitHub: https://github.com/Manjimaa-m/library-management-system
+[GitHub Repository](https://github.com/Manjimaa-m/library-management-system)
 
 ## Developer
 
-**GitHub:** Manjimaa-m
+**GitHub:** [Manjimaa-m](https://github.com/Manjimaa-m)
 
 ## License
 
