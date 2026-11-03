@@ -1,13 +1,13 @@
-# Project Screenshots
+## Application Screenshots
 
-This folder contains screenshots of the Library Management System.
+### Library Member
+![Library Member](Screenshot%202026-11-03%20051715.png)
 
-## Modules
-- Library Member Management
-- Library Article Management
-- Library Membership Management
-- Library Transaction Management
+### Library Transaction
+![Library Transaction](Screenshot%202026-11-03%20052505.png)
 
-## Transaction Workflow
-- Book Issue
-- Book Return
+### Library Membership
+![Library Membership](Screenshot%202026-11-03%20052631.png)
+
+### Library Article
+![Library Article](Screenshot%202026-11-03%20052834.png)
